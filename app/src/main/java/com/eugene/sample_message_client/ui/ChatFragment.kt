@@ -56,7 +56,6 @@ class ChatFragment : Fragment(), CoroutineScope {
             if (messageText.isNotBlank()) {
                 launch {
                     inputMessage.text.clear()
-                    repository.postMessage(username, messageText).await()
                 }
             }
         }
